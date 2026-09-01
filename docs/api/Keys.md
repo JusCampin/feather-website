@@ -1,49 +1,7 @@
-# Keys
+---
+title: Controls and Keys (Toolkit)
+---
 
-## Key Codes
+# Controls and Keys
 
-easy game keycodes are exposed to the API.
-
-example
-
-```lua
-Feather.KeyCodes['A'] -- returns 0x7065027D
-```
-
-## Key Events <Badge type="warning" text="Client Side Only" />
-
-### KeyJustPressed
-
-```lua
-Feather.Keys.whenKeyJustPressed(Feather.KeyCodes['A'])
-```
-
-### Register Key Listener
-
-```lua
-Feather.Keys:RegisterListener(keycode, function ()
-    -- Do something
-end)
-```
-
-### Remove Key Listener
-
-```lua
-local myKeyListener = Feather.Keys:RegisterListener(keycode, function ()
-    -- Do something
-end)
-
-Feather.Keys:RemoveListener({ myKeyListener.keycode, myKeyListener.position })
-```
-
-or
-
-```lua
-local myKeyListener = Feather.Keys:RegisterListener(keycode, function ()
-    -- Do something
-end)
-
-myKeyListener:RemoveListener()
-```
-
-The listener is also removed automatically when the resource that registered it stops.
+Named control resolution and owned key listeners are part of Feather Toolkit. See [Controls and Keys](/api/toolkit/Controls-and-Keys) for signatures and examples.
