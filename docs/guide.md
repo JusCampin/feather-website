@@ -27,9 +27,11 @@ head:
       href: logo.png
 ---
 
-# **GETTING STARTED**
+# Set up Feather
 
-## Feather Framework TX Recipe <Badge type="warning" text="alpha" />
+This guide walks a server owner through creating a RedM server and installing Feather with the official txAdmin recipe. You do not need software-development experience to follow it.
+
+## Feather Framework txAdmin recipe <Badge type="warning" text="alpha" />
 
 ### Dependencies
 -   Windows or Linux (Ubuntu/Debian recommended)

@@ -1,30 +1,15 @@
-# Locale API
+---
+title: Locale (Core)
+---
 
-## Register Locale Translations
-Registers a table of translations
+# Locale
 
-> FeatherCore.locale.register(name, translation)
-
-- `name<string>` - name of the translation
-- `translation<table>` - a table of translations
+Locale registration and translation are provided by Feather Core.
 
 ```lua
-FeatherCore.Locale.register("en_us", {
-    loadscreen_title = "Loading the world...",
-    loadscreen_subtitle = "In this dusty frontier, loading moments become tales whispered near campfires.",
-    loadscreen_signature = "-Someone probably"
-})
+exports['feather-core']:RegisterLocale(locale, translations) -> Result
+exports['feather-core']:TranslateLocale(key, variables?, locale?) -> Result
+exports['feather-core']:SetClientLocale(locale) -> Result
 ```
 
-## Register Locale Translations
-Registers a table of translations
-
-> FeatherCore.locale.translate(src, name)
-
-- `src` - player source (if client then 0)
--  `name<string>` - name of the translation
-
-```lua
-  -- (src, name). if on client src is 0
-  FeatherCore.Locale.translate(0, "loadscreen_title")
-```
+See the [Core resource reference](/api/resources/Core) for the shared result contract and configuration.

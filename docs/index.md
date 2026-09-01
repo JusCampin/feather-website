@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Home
-
-# Meta property
+title: Feather Framework
+titleTemplate: Open-source RedM framework
+description: A modular, open-source RedM framework built for server owners and resource developers.
 head:
   - - meta
     - property: og:type
@@ -12,67 +12,53 @@ head:
       content: Feather Framework
   - - meta
     - property: og:description
-      content: Unlock Boundless Possibilities with Feather Framework
+      content: Build your RedM server on clear contracts and modular resources.
   - - meta
     - property: og:image
       content: https://avatars.githubusercontent.com/u/140788019?s=200&v=4
   - - meta
-    - name: title
-      content: Feather Framework
-  - - meta
-    - name: description
-      content: Unlock Boundless Possibilities with Feather Framework
-  - - meta
     - name: twitter:card
-      content: https://avatars.githubusercontent.com/u/140788019?s=200&v=4
-  - - link
-    - rel: icon
-      type: image/png
-      href: logo.png
+      content: summary
 
-# Hero section
 hero:
-  name: Feather Framework
-  text: Unlock Boundless Possibilities for your server
+  name: Feather
+  text: A steadier foundation for RedM.
   image:
     src: /logo2.png
-    alt: Feather Framework logo
-  tagline: Where Passion Meets Code, and Communities Thrive
+    alt: Feather Framework
+  tagline: Modular resources, explicit contracts, and documentation built for both server owners and developers.
   actions:
     - theme: brand
-      text: Get Started
+      text: Set up a server
       link: /guide
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/FeatherFramework
+      text: Explore the API
+      link: /api
 
-# Features section
 features:
-  - icon: 🎨
-    title: Unleash Infinite Creativity
-    details: With our framework, customization knows no bounds. Craft a unique experience that mirrors your vision, effortlessly.
-  - icon: 🤝
-    title: Building Dreams Together
-    details: Join a thriving community where passionate scripters unite. Share knowledge, pool resources, and create something extraordinary.
-  - icon: ⚡
-    title: Power and Performance Unleashed
-    details: Our framework is finely tuned for optimal performance. Elevate your server's capabilities and deliver an unparalleled gaming experience.
+  - icon: ◈
+    title: Modular by design
+    details: Install the resources your server needs and keep gameplay ownership where it belongs.
+  - icon: ⌁
+    title: Contracts you can trust
+    details: Named exports, structured results, and server-authoritative boundaries make integrations easier to reason about.
+  - icon: ✦
+    title: Open development
+    details: Feather is free, open source, and shaped in public by the people building with it.
 ---
 
-<script setup>
-  const actionClicked = () => {
-    window.open('https://github.com/FeatherFramework', "_blank");
-  }
-
-</script>
-
-<div class="max-w-xl rounded-lg overflow-hidden mx-auto my-20">
-  <div class="text-center flex items-center justify-center">
-    <div class="max-w-md">
-      <img src="/oss.png" class="mx-auto min-w-20 prevent-select"/>
-      <h1 class="text-5xl font-bold prevent-select tert-clip">Open Source. Free. Always.</h1>
-      <p class="py-6 prevent-select">Our framework is made and maintained purely as a labor of love, driven by the community's passion for roleplaying and the desire to share our creations with others. We offer this framework and scripts freely and as a way to contribute to the community, helping others explore and enjoy the art of roleplaying and programming.</p>
-      <button class="bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded-full" @click="actionClicked">Help Contribute</button>
+<section class="feather-home-band">
+  <div class="feather-home-band__inner">
+    <div>
+      <div class="feather-eyebrow">Build with confidence</div>
+      <h2>Start simple. Extend deliberately.</h2>
+      <p>Server owners get a practical setup path. Developers get focused resource references, signatures, configuration notes, and examples without having to reverse-engineer the framework.</p>
+    </div>
+    <div class="feather-home-band__links">
+      <a class="feather-home-link" href="/guide">Server setup guide <span>→</span></a>
+      <a class="feather-home-link" href="/api/resources/Core">Framework resources <span>→</span></a>
+      <a class="feather-home-link" href="/api/toolkit/Overview">Developer toolkit <span>→</span></a>
+      <a class="feather-home-link" href="https://github.com/FeatherFramework">Contribute on GitHub <span>↗</span></a>
     </div>
   </div>
-</div>
+</section>
