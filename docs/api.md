@@ -27,13 +27,15 @@ Use these references to configure Feather resources and integrate your own gamep
     <p>Server-authoritative instances, ledgers, access, transactions, equipment, and item-owner hooks.</p>
     <span class="feather-doc-card__arrow">Read Inventory →</span>
   </a>
-  <a class="feather-doc-card" href="/api/Menu">
+  <a class="feather-doc-card" href="/api/resources/Menuv2">
     <span class="feather-doc-card__label">Interface</span>
-    <strong>Menu</strong>
-    <p>Define standalone NUI menus, pages, controls, and notifications entirely from Lua.</p>
-    <span class="feather-doc-card__arrow">Read Menu →</span>
+    <strong>Menu v2</strong>
+    <p>The official Feather menu system: build NUI menus, pages, tabs, and controls from Lua.</p>
+    <span class="feather-doc-card__arrow">Read Menu v2 →</span>
   </a>
 </div>
+
+Existing resources using `feather-menu` still need [Legacy: Menu v1](/api/resources/Menuv1). [Menu v2](/api/resources/Menuv2) is the official system for new Feather development and uses a different API. Keep Legacy until the resources that depend on it have migrated.
 
 ## API conventions
 

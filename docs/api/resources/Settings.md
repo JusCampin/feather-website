@@ -8,7 +8,7 @@ Feather Settings owns the player settings menu and its default `PGUP` input. Fea
 
 ## Settings
 
-`Config.Hotkey` selects the menu control. `Config.DefaultLocale` and `Config.Languages` configure the language selector. Settings depends on Core, Menu, and PVP.
+`Config.Hotkey` selects the menu control. `Config.DefaultLocale` and `Config.Languages` configure the language selector. Settings depends on Core, [Menu v2](/api/resources/Menuv2) (`feather-menu-v2`), and PVP. Start those dependencies before Settings.
 
 ## Client provider API
 

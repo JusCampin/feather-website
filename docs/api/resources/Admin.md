@@ -8,6 +8,8 @@ Feather Admin is the operator interface for moderation, reports, cases, player n
 
 ## Requirements and installation
 
+This version of Admin still requires [Legacy: Menu v1](/api/resources/Menuv1) (`feather-menu`). Keep that dependency until Admin's menu integration is migrated. [Menu v2](/api/resources/Menuv2) is the official system for new Feather development; installing it does not replace Admin's existing v1 API calls.
+
 ```cfg
 ensure oxmysql
 ensure feather-core
