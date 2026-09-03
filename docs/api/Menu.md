@@ -1,60 +1,18 @@
 ---
-title: Menu
+title: Choose your Feather Menu version
 ---
 
-# Feather Menu
+# Choose your Feather Menu version
 
-`feather-menu` is a standalone Lua-defined NUI menu system for RedM. It has no Feather Core dependency.
+This address previously documented `feather-menu`. Its API reference now lives at [Legacy: Menu v1](/api/resources/Menuv1).
 
-## Setup
+::: warning Existing integrations still need their original dependency
+**Feather Menu v1 (`feather-menu`) is Legacy. Feather Menu v2 (`feather-menu-v2`) is the official Feather Framework menu system for new development.** V2 has a different API and does not automatically replace v1 in existing RedM resources.
+:::
 
-1. Put `feather-menu` in your server's resources directory.
-2. Add `ensure feather-menu` to `server.cfg`.
-3. Ensure it before resources that create menus.
+| What your resource calls | Documentation and dependency |
+| --- | --- |
+| `exports['feather-menu']:initiate()` | [Legacy: Menu v1](/api/resources/Menuv1); keep `feather-menu`. |
+| `exports['feather-menu-v2']:CreateMenu(...)` | [Menu v2](/api/resources/Menuv2); use `feather-menu-v2`. |
 
-## API
-
-```lua
-exports['feather-menu']:initiate() -> FeatherMenu
-
-FeatherMenu:RegisterMenu(menuId, config, callbacks?) -> Menu
-FeatherMenu:Notify(options, callback?)
-
-Menu:RegisterPage(pageId) -> Page
-Menu:Open(options?)
-Menu:Close(options?)
-Menu:UnRegister()
-
-Page:RegisterElement(type, data, callback?) -> Element
-Page:UnRegister()
-
-Element:update(data)
-Element:UnRegister()
-```
-
-## Example
-
-```lua
-local FeatherMenu = exports['feather-menu']:initiate()
-
-local menu = FeatherMenu:RegisterMenu('my_menu', {
-  top = '50%',
-  left = '50%',
-  draggable = true,
-  canclose = true
-}, {})
-
-local page = menu:RegisterPage('main')
-page:RegisterElement('button', {
-  label = 'Continue',
-  slot = 'content'
-}, function()
-  menu:Close()
-end)
-
-menu:Open({ startupPage = page })
-```
-
-Available element types are `header`, `subheader`, `line`, `bottomline`, `button`, `input`, `textarea`, `slider`, `arrows`, `toggle`, `checkbox`, `dropdown`, `gridslider`, `imagebox`, `imageboxcontainer`, `html`, `pagearrows`, and `textdisplay`.
-
-Opening a menu closes the active menu by default. Set `overrideMenu = false` in the open options when opening should fail instead.
+Both can be installed together. Keep their original folder names, start each before its consumers, and migrate each consuming resource before removing Legacy. Menu v2 currently has Contract 1 alpha status; consult its guide for release readiness.

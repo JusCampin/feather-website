@@ -8,9 +8,12 @@ Feather Character owns Character creation, selection, UUID identity, profiles, a
 
 ## Installation and settings
 
+This version of Character still requires [Legacy: Menu v1](/api/resources/Menuv1) (`feather-menu`). [Menu v2](/api/resources/Menuv2) is the official system for new Feather development, but Character's existing menu calls must be migrated before its Legacy dependency can be removed.
+
 ```cfg
 ensure oxmysql
 ensure feather-core
+ensure feather-menu
 ensure feather-character
 ```
 
